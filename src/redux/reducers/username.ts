@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { setter } from "../../actions/common";
+import { setUsername } from "../../actions/username";
 
-const initialState = "";
+const initialState = sessionStorage.getItem("username") ?? "";
 
 const usernameSlice = createSlice({
   name: "username",
   initialState,
   reducers: {
-    setUsername: setter<string>,
+    setUsername: setUsername,
   },
 });
 
