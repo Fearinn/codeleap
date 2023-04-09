@@ -2,10 +2,16 @@ import { useState } from "react";
 import { StyledButton } from "../../components/Button/StyledButton";
 import { Modal } from "../../components/Modal";
 import { StyledHome } from "./StyledHome";
+import { useTypedDispatch } from "../../redux/hooks";
+import { usernameActions } from "../../redux/reducers/username";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
   const [modal, setModal] = useState(false);
   const [username, setUsername] = useState("");
+  const dispatch = useTypedDispatch();
+
+  const navigate = useNavigate();
 
   function closeModal() {
     setModal(false);
@@ -22,8 +28,9 @@ export function Home() {
         <form
           onSubmit={(event) => {
             event.preventDefault();
+            dispatch(usernameActions.setUsername(username));
+            navigate("/posts");
             closeModal();
-            alert(username);
           }}
         >
           <div className="username">
