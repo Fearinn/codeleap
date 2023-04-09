@@ -11,7 +11,7 @@ export function Header({
     <StyledHeader>
       <h1>{children}</h1>
       {editable && (
-        <div>
+        <div className="buttons">
           <button
             aria-label="delete post"
             onClick={() => {

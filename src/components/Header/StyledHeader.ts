@@ -11,4 +11,9 @@ export const StyledHeader = styled.header`
   font-weight: bold;
   padding: 2.312rem 1.685rem;
   width: 100%;
+
+  .buttons {
+    display: flex;
+    gap: 1.5rem;
+  }
 `;
