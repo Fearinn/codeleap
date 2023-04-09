@@ -1,3 +1,7 @@
+:root {
+  font-family: "Roboto", sans-serif;
+}
+
 * {
   box-sizing: border-box;
   border: none;
@@ -5,5 +9,24 @@
   margin: 0;
   padding: 0;
   color: inherit;
+  font-family: inherit;
   font-size: inherit;
+}
+
+#root,
+body,
+#root > main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+body > main {
+  padding: 1.5rem;
+}
+
+button {
+  cursor: pointer;
 }
