@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useTypedSelector } from "../../redux/hooks";
 import { TPost } from "../../types/TPost";
 import { compareDates } from "../../utils/compareDates";
@@ -10,7 +11,20 @@ export function PostCard({
   username,
   created_datetime,
 }: TPost) {
-  const timeSinceCreated = compareDates(new Date(created_datetime));
+  const [timeSinceCreated, setTimeSinceCreated] = useState(
+    compareDates(new Date(created_datetime))
+  );
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTimeSinceCreated(compareDates(new Date(created_datetime)));
+    }, 1000 * 60);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  });
+
   const storedUsername = useTypedSelector((state) => state.usernameReducer);
   return (
     <StyledPostCard>
