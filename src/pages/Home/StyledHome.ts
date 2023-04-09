@@ -28,7 +28,7 @@ export const StyledHome = styled.main`
 
     button {
       margin-top: 1rem;
-      align-self: end;
+      align-self: flex-end;
     }
   }
 `;
