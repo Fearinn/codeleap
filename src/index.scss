@@ -1,5 +1,6 @@
 :root {
   font-family: "Roboto", sans-serif;
+  min-width: 320px;
 }
 
 * {
@@ -11,6 +12,7 @@
   color: inherit;
   font-family: inherit;
   font-size: inherit;
+  max-width: 100%;
 }
 
 #root,
