@@ -47,12 +47,7 @@ export function Home() {
               }}
             />
           </div>
-          <StyledButton
-            active={!!username}
-            disabled={!username}
-            variant="primary"
-            type="submit"
-          >
+          <StyledButton disabled={!username} variant="primary" type="submit">
             Enter
           </StyledButton>
         </form>

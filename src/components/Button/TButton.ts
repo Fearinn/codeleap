@@ -1,5 +1,4 @@
 export type TButton = {
-  active?: boolean;
   variant: TButtonVariant;
 };
 
