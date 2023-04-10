@@ -18,7 +18,7 @@ export function Home() {
   }
 
   return (
-    <StyledHome>
+    <StyledHome id="main">
       <Modal
         title="Welcome to CodeLeap Network!"
         open={modal}
