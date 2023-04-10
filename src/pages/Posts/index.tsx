@@ -3,7 +3,7 @@ import { StyledPosts } from "./StyledPosts";
 import { postsService } from "../../actions/services/posts";
 import { Header } from "../../components/Header";
 import { PostCard } from "../../components/PostCard";
-import { NewPost } from "../../components/CreatePost";
+import { NewPost } from "../../components/NewPost";
 import { useDispatch } from "react-redux";
 import { useTypedSelector } from "../../redux/hooks";
 import { postsActions } from "../../redux/reducers/posts";
