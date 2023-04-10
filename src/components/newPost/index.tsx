@@ -6,6 +6,8 @@ import { StyledNewPost } from "./StyledNewPost";
 import { useTypedDispatch, useTypedSelector } from "../../redux/hooks";
 import { postsService } from "../../actions/services/posts";
 import { postsActions } from "../../redux/reducers/posts";
+import { errorActions } from "../../redux/reducers/error";
+import { successActions } from "../../redux/reducers/success";
 
 export function NewPost() {
   const username = useTypedSelector((state) => state.usernameReducer);
@@ -14,21 +16,24 @@ export function NewPost() {
   const dispatch = useTypedDispatch();
 
   async function addPost(username: string, title: string, content: string) {
-    await postsService.save(username, title, content);
-    const response = await postsService
-      .fetch()
-      .catch(() =>
-        alert("There was an unexpected error! Please try again later")
-      );
+    try {
+      await postsService.save(username, title, content);
+      const { results } = await postsService.fetch();
 
-    if (response) dispatch(postsActions.setPosts(response.results));
+      dispatch(successActions.setSuccess(true));
+      dispatch(postsActions.setPosts(results));
+    } catch (err) {
+      dispatch(errorActions.setError(true));
+    }
   }
 
   return (
     <StyledNewPost
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
-        addPost(username, title, content);
+        await addPost(username, title, content);
+        setTitle("");
+        setContent("");
       }}
     >
       <h2>What's on your mind?</h2>
@@ -36,6 +41,7 @@ export function NewPost() {
         <label>Title</label>
         <StyledInput
           name="title"
+          value={title}
           onChange={(event) => setTitle(event.target.value)}
         />
       </div>
@@ -44,6 +50,7 @@ export function NewPost() {
         <StyledInput
           as="textarea"
           name="content"
+          value={content}
           onChange={(event) => setContent(event.target.value)}
         />
       </div>
