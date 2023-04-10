@@ -43,9 +43,15 @@ export function Posts() {
           {error && <Message error={true} />}
           {sucess && <Message error={false} />}
           <ul className="posts">
-            <NewPost />
+            <li>
+              <NewPost />
+            </li>
             {posts.map((post) => {
-              return <PostCard {...post} key={post.id}></PostCard>;
+              return (
+                <li key={post.id}>
+                  <PostCard {...post}></PostCard>
+                </li>
+              );
             })}
           </ul>
           <div className="pagination">
