@@ -5,4 +5,6 @@ export const colors = {
   buttonNegative: "#FF5151",
   fontPrimary: "#000000",
   fontSecondary: "#FFFFFF",
+  grayLight: "#777777",
+  grayDark: "#999999",
 };
