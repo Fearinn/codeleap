@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../assets/cssVariables";
 
 export const StyledPostCard = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ export const StyledPostCard = styled.div`
     border-top-right-radius: 16px;
   }
 
-  .container {
+  .content-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -26,7 +27,7 @@ export const StyledPostCard = styled.div`
   .creation-info {
     display: flex;
     justify-content: space-between;
-    color: #777777;
+    color: ${colors.grayLight};
     gap: 0.5rem;
     flex-wrap: wrap;
   }
@@ -36,7 +37,7 @@ export const StyledPostCard = styled.div`
     word-break: break-all;
   }
 
-  button {
-    background-color: transparent;
+  form {
+    border: none;
   }
 `;

@@ -15,5 +15,9 @@ export const StyledHeader = styled.header`
   .buttons {
     display: flex;
     gap: 1.5rem;
+
+    button {
+      background-color: transparent;
+    }
   }
 `;

@@ -26,6 +26,7 @@ export const StyledModal = styled.div`
     background-color: ${colors.backgroundPrimary};
     border-radius: 16px;
     padding: 1.5rem;
+    min-width: 80%;
     width: fit-content;
 
     @keyframes fadeIn {
