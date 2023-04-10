@@ -38,19 +38,21 @@ export function NewPost() {
     >
       <h2>What's on your mind?</h2>
       <div className="container">
-        <label>Title</label>
+        <label htmlFor="title">Title</label>
         <StyledInput
           name="title"
+          id="title"
           value={title}
           onChange={(event) => setTitle(event.target.value)}
         />
       </div>
       <div className="container">
-        <label>Content</label>
+        <label htmlFor="content">Content</label>
         <StyledInput
+          value={content}
           as="textarea"
           name="content"
-          value={content}
+          id="content"
           onChange={(event) => setContent(event.target.value)}
         />
       </div>
