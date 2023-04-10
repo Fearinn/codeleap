@@ -22,12 +22,25 @@ export const StyledModal = styled.div`
     animation-timing-function: ease-out;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
     background-color: ${colors.backgroundPrimary};
     border-radius: 16px;
     padding: 1.5rem;
     min-width: 80%;
     width: fit-content;
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    form {
+      width: 100%;
+    }
 
     @keyframes fadeIn {
       0% {
