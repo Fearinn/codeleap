@@ -1,13 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
+import { postsService } from "../../actions/services/posts";
+import { useTypedDispatch, useTypedSelector } from "../../redux/hooks";
+import { errorActions } from "../../redux/reducers/error";
+import { postsActions } from "../../redux/reducers/posts";
+import { successActions } from "../../redux/reducers/success";
 import { StyledButton } from "../Button/StyledButton";
 import { StyledInput } from "../Input/StyledInput";
 import { StyledNewPost } from "./StyledNewPost";
-import { useTypedDispatch, useTypedSelector } from "../../redux/hooks";
-import { postsService } from "../../actions/services/posts";
-import { postsActions } from "../../redux/reducers/posts";
-import { errorActions } from "../../redux/reducers/error";
-import { successActions } from "../../redux/reducers/success";
 
 export function NewPost() {
   const username = useTypedSelector((state) => state.usernameReducer);
