@@ -37,7 +37,7 @@ export function Posts() {
 
   return (
     <>
-      <Header>CodeLeap Network</Header>
+      <Header main={true}>CodeLeap Network</Header>
       <main id="main">
         <StyledPosts>
           {error && <Message error={true} />}
