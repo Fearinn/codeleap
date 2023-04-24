@@ -1,6 +1,14 @@
 # 🌐 codeleap-test
 
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **CodeLeap Network**
+| :label: Tecnologias | react, redux, axios, typescript, styled-components
+| :rocket: URL         | https://codeleap-test-dun.vercel.app/
+
 This project was created as part of CodeLeap's recruitment process. It's similar to a simple social media, with CRUD actions.
+
+![preview](https://user-images.githubusercontent.com/105985983/234108847-c9181aab-4597-4b60-9de6-b5bc7d933311.png#vitrinedev)
 
 ## 🪄 Features
 
@@ -10,10 +18,13 @@ This project was created as part of CodeLeap's recruitment process. It's similar
 - Modals with animation and focus control;
 - Success and error messages after API calls.
 
-## 👨‍💻 Tech stack 
+## :hammer: Possible improvements 
 
-- React;
-- TypeScript;
-- Redux (Redux Toolkit);
-- Styled Components;
-- Axios.
+If I could put more time and effort on this project, I would try to:
+
+- Add dark theme;
+- Set interval to automatically update timeline;
+- Add custom messages for each failed or succesfull action;
+- Add possibility to mute/block other users;
+- Add profile pages;
+- Add real login/logout, with password and JWT.
