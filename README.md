@@ -8,7 +8,7 @@
 
 This project was created as part of CodeLeap's recruitment process. It's similar to a simple social media, with CRUD actions.
 
-![preview](https://user-images.githubusercontent.com/105985983/234108847-c9181aab-4597-4b60-9de6-b5bc7d933311.png#vitrinedev)
+![preview](https://user-images.githubusercontent.com/105985983/234138564-07c2c4e8-a240-4ba1-a345-fe1dcc672be8.png#vitrinedev)
 
 ## 🪄 Features
 
