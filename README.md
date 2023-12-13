@@ -4,7 +4,7 @@
 | -------------  | --- |
 | :sparkles: Nome        | **CodeLeap Network**
 | :label: Tecnologias | react, redux, axios, typescript, styled-components
-| :rocket: URL         | https://codeleap-test-dun.vercel.app/
+| :rocket: URL         | https://codeleap-roan.vercel.app/
 
 This project was created as part of CodeLeap's recruitment process. It's similar to a simple social media, with CRUD actions.
 
